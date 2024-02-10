@@ -1,20 +1,29 @@
-// set2.dart
 import 'quiz_question.dart';
 
 final List<QuizQuestion> set2Questions = [
   QuizQuestion(
-    question: "In Japan, what color is used for stop signs?",
-    options: ["Red", "Yellow", "Blue", "Green"],
-    correctAnswer: "Red",
+    question: "What is the capital of France?",
+    options: ["London", "Berlin", "Paris", "Madrid"],
+    correctAnswer: "Paris",
   ),
   QuizQuestion(
-    question: "What does a triangular road sign indicate in Japan?",
-    options: ["Stop", "Yield", "No Entry", "Warning"],
-    correctAnswer: "Warning",
+    question: "Which is the largest ocean on Earth?",
+    options: ["Atlantic", "Indian", "Arctic", "Pacific"],
+    correctAnswer: "Pacific",
   ),
   QuizQuestion(
-    question: "What is the legal age to obtain a driving license in Japan?",
-    options: ["18", "20", "16", "22"],
-    correctAnswer: "18",
+    question: "What is the currency of Japan?",
+    options: ["Yen", "Won", "Dollar", "Euro"],
+    correctAnswer: "Yen",
+  ),
+  QuizQuestion(
+    question: "Who wrote 'Romeo and Juliet'?",
+    options: ["Charles Dickens", "Jane Austen", "William Shakespeare", "Mark Twain"],
+    correctAnswer: "William Shakespeare",
+  ),
+  QuizQuestion(
+    question: "What is the largest mammal in the world?",
+    options: ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+    correctAnswer: "Blue Whale",
   ),
 ];

@@ -5,8 +5,10 @@ import 'package:demo_application/quiz_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:demo_application/set1.dart';
+import 'package:demo_application/set2.dart'; // Import set2.dart
 
-main() {
+void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: blue));
   runApp(const App());
 }
@@ -41,11 +43,12 @@ class QuizApp extends StatelessWidget {
           height: double.infinity,
           padding: const EdgeInsets.all(12),
           decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [blue, darkBlue],
-              )),
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [blue, darkBlue],
+            ),
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -64,16 +67,17 @@ class QuizApp extends StatelessWidget {
                 ),
               ),
               Image.asset(
-                balloon2,
+                elephant,
               ),
               const SizedBox(height: 20),
               normalText(color: lightgrey, size: 18, text: "Welcome to our"),
-              headingText(color: Colors.white, size: 32, text: "Quiz App"),
+              headingText(color: Colors.white, size: 32, text: "Driving App"),
               const SizedBox(height: 20),
               normalText(
                   color: lightgrey,
                   size: 16,
-                  text: "Do you feel confident? Here you'll face our most difficult questions!"),
+                  text: "This app is designed for you to practice test for your driving Exam."
+                      "\n Developed by KhatoriTech"),
               const Spacer(),
               Align(
                 alignment: Alignment.center,
@@ -81,7 +85,10 @@ class QuizApp extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => const QuizScreen()));
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => QuizScreen(questions: set1Questions)),
+                        );
                       },
                       child: Container(
                         margin: const EdgeInsets.only(bottom: 20),
@@ -97,7 +104,10 @@ class QuizApp extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => const QuizScreen()));
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => QuizScreen(questions: set2Questions)),
+                        );
                       },
                       child: Container(
                         margin: const EdgeInsets.only(bottom: 20),

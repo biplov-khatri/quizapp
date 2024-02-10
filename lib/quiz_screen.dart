@@ -1,10 +1,13 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'set1.dart'; // Import set1.dart file
+import 'quiz_question.dart';
+import 'quiz_result_screen.dart';
 
 class QuizScreen extends StatefulWidget {
-  const QuizScreen({Key? key}) : super(key: key);
+  final List<QuizQuestion> questions;
+
+  const QuizScreen({Key? key, required this.questions}) : super(key: key);
 
   @override
   State<QuizScreen> createState() => _QuizScreenState();
@@ -21,18 +24,19 @@ class _QuizScreenState extends State<QuizScreen> {
 
   late List<QuizQuestion> quizQuestions;
 
-  var optionsList = <String>[];
-
   var optionsColor = List<Color>.generate(4, (index) => Colors.white);
-
   var userSelectedIndex;
+  late String correctAnswer;
 
   @override
   void initState() {
     super.initState();
-    // Initialize quiz questions from set1.dart
-    quizQuestions = set1Questions;
+    shuffleQuestions();
     startTimer();
+  }
+
+  void shuffleQuestions() {
+    quizQuestions = List.from(widget.questions)..shuffle();
   }
 
   @override
@@ -59,34 +63,41 @@ class _QuizScreenState extends State<QuizScreen> {
 
   gotoNextQuestion() {
     isLoaded = false;
-    currentQuestionIndex++;
     resetColors();
     userSelectedIndex = null; // Reset user selection
     timer!.cancel();
     seconds = 60;
     startTimer();
 
-    if (currentQuestionIndex == quizQuestions.length) {
-      // If all questions are answered, show the result
+    if (currentQuestionIndex < quizQuestions.length - 1) {
+      currentQuestionIndex++;
+      updateCurrentQuestion();
+    } else {
+      timer!.cancel();
+      // Handle quiz completion
       showResult();
     }
   }
 
+  void updateCurrentQuestion() {
+    correctAnswer = quizQuestions[currentQuestionIndex].correctAnswer;
+    setState(() {
+      shuffleOptions();
+    });
+  }
+
+  void shuffleOptions() {
+    quizQuestions[currentQuestionIndex].options.shuffle();
+  }
+
   showResult() {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text("Quiz Result"),
-        content: Text("Total Points: $points"),
-        actions: [
-          TextButton(
-            onPressed: () {
-              Navigator.pop(context); // Close the result dialog
-              Navigator.pop(context); // Return to the main screen
-            },
-            child: Text("OK"),
-          ),
-        ],
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => QuizResultScreen(
+          totalPoints: points,
+          totalQuestions: quizQuestions.length,
+        ),
       ),
     );
   }
@@ -109,13 +120,16 @@ class _QuizScreenState extends State<QuizScreen> {
           ),
           child: currentQuestionIndex < quizQuestions.length
               ? buildQuizScreen(size)
-              : buildResultScreen(size),
+              : Container(), // Empty container when no questions remaining
         ),
       ),
     );
   }
 
   Widget buildQuizScreen(Size size) {
+    var currentQuestion = quizQuestions[currentQuestionIndex];
+    correctAnswer = currentQuestion.correctAnswer;
+
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -167,21 +181,19 @@ class _QuizScreenState extends State<QuizScreen> {
           ),
           const SizedBox(height: 20),
           Text(
-            quizQuestions[currentQuestionIndex].question,
+            currentQuestion.question,
             style: TextStyle(color: Colors.white, fontSize: 20),
           ),
           const SizedBox(height: 20),
           ListView.builder(
             shrinkWrap: true,
-            itemCount: quizQuestions[currentQuestionIndex].options.length,
+            itemCount: currentQuestion.options.length,
             itemBuilder: (BuildContext context, int index) {
-              var answer = quizQuestions[currentQuestionIndex].correctAnswer;
-
               return GestureDetector(
                 onTap: () {
                   setState(() {
                     userSelectedIndex = index;
-                    if (answer == quizQuestions[currentQuestionIndex].options[index]) {
+                    if (correctAnswer == currentQuestion.options[index]) {
                       optionsColor[index] = Colors.green;
                       points = points + 1; // Each correct answer is worth 1 point
                     } else {
@@ -206,14 +218,14 @@ class _QuizScreenState extends State<QuizScreen> {
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
                     color: userSelectedIndex == index
-                        ? (answer == quizQuestions[currentQuestionIndex].options[index]
+                        ? (correctAnswer == currentQuestion.options[index]
                         ? Colors.green // Correct answer selected
                         : Colors.red) // Incorrect answer selected
                         : optionsColor[index],
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Text(
-                    quizQuestions[currentQuestionIndex].options[index],
+                    currentQuestion.options[index],
                     style: TextStyle(color: Colors.blue, fontSize: 18),
                   ),
                 ),
@@ -221,8 +233,7 @@ class _QuizScreenState extends State<QuizScreen> {
             },
           ),
           if (userSelectedIndex != null &&
-              quizQuestions[currentQuestionIndex].correctAnswer !=
-                  quizQuestions[currentQuestionIndex].options[userSelectedIndex!])
+              correctAnswer != currentQuestion.options[userSelectedIndex!])
             Container(
               margin: const EdgeInsets.only(top: 20),
               padding: const EdgeInsets.all(12),
@@ -231,29 +242,10 @@ class _QuizScreenState extends State<QuizScreen> {
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Text(
-                "Correct Answer: ${quizQuestions[currentQuestionIndex].correctAnswer}",
+                "Correct Answer: $correctAnswer",
                 style: TextStyle(color: Colors.white, fontSize: 18),
               ),
             ),
-        ],
-      ),
-    );
-  }
-
-  Widget buildResultScreen(Size size) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            "Quiz Completed!",
-            style: TextStyle(color: Colors.white, fontSize: 24),
-          ),
-          const SizedBox(height: 20),
-          Text(
-            "Total Points: $points",
-            style: TextStyle(color: Colors.white, fontSize: 20),
-          ),
         ],
       ),
     );
