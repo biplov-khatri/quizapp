@@ -157,7 +157,7 @@ class _QuizScreenState extends State<QuizScreen> {
                 children: [
                   Text(
                     "$seconds",
-                    style: TextStyle(color: Colors.white, fontSize: 24),
+                    style: const TextStyle(color: Colors.white, fontSize: 24),
                   ),
                   SizedBox(
                     width: 80,
@@ -176,13 +176,13 @@ class _QuizScreenState extends State<QuizScreen> {
             alignment: Alignment.centerLeft,
             child: Text(
               "Question ${currentQuestionIndex + 1} of ${quizQuestions.length}",
-              style: TextStyle(color: Colors.grey, fontSize: 18),
+              style: const TextStyle(color: Colors.grey, fontSize: 18),
             ),
           ),
           const SizedBox(height: 20),
           Text(
             currentQuestion.question,
-            style: TextStyle(color: Colors.white, fontSize: 20),
+            style: const TextStyle(color: Colors.white, fontSize: 20),
           ),
           const SizedBox(height: 20),
           ListView.builder(
@@ -226,7 +226,7 @@ class _QuizScreenState extends State<QuizScreen> {
                   ),
                   child: Text(
                     currentQuestion.options[index],
-                    style: TextStyle(color: Colors.blue, fontSize: 18),
+                    style: const TextStyle(color: Colors.blue, fontSize: 18),
                   ),
                 ),
               );
@@ -243,7 +243,7 @@ class _QuizScreenState extends State<QuizScreen> {
               ),
               child: Text(
                 "Correct Answer: $correctAnswer",
-                style: TextStyle(color: Colors.white, fontSize: 18),
+                style: const TextStyle(color: Colors.white, fontSize: 18),
               ),
             ),
         ],

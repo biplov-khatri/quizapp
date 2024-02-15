@@ -1,12 +1,13 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:demo_application/const/colors.dart';
 import 'package:demo_application/const/images.dart';
 import 'package:demo_application/const/text_style.dart';
 import 'package:demo_application/quiz_screen.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:demo_application/set1.dart';
-import 'package:demo_application/set2.dart'; // Import set2.dart
+import 'package:demo_application/set2.dart';
+import 'package:demo_application/test.dart';
+import 'package:demo_application/study_materials.dart'; // Import the StudyMaterialsPage
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: blue));
@@ -20,7 +21,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const QuizApp(),
+      home: const HomePage(),
       theme: ThemeData(
         fontFamily: "quick",
       ),
@@ -29,8 +30,8 @@ class App extends StatelessWidget {
   }
 }
 
-class QuizApp extends StatelessWidget {
-  const QuizApp({Key? key}) : super(key: key);
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -52,20 +53,6 @@ class QuizApp extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  border: Border.all(color: lightgrey, width: 2),
-                ),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    CupertinoIcons.xmark,
-                    color: Colors.white,
-                    size: 28,
-                  ),
-                ),
-              ),
               Image.asset(
                 elephant,
               ),
@@ -74,10 +61,11 @@ class QuizApp extends StatelessWidget {
               headingText(color: Colors.white, size: 32, text: "Driving App"),
               const SizedBox(height: 20),
               normalText(
-                  color: lightgrey,
-                  size: 16,
-                  text: "This app is designed for you to practice test for your driving Exam."
-                      "\n Developed by KhatoriTech"),
+                color: lightgrey,
+                size: 16,
+                text: "This app is designed for you to practice test for your driving Exam."
+                    "\n Developed by KhatoriTech",
+              ),
               const Spacer(),
               Align(
                 alignment: Alignment.center,
@@ -87,7 +75,7 @@ class QuizApp extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => QuizScreen(questions: set1Questions)),
+                          MaterialPageRoute(builder: (context) => TestPage()),
                         );
                       },
                       child: Container(
@@ -99,14 +87,14 @@ class QuizApp extends StatelessWidget {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        child: headingText(color: blue, size: 18, text: "Test 1"),
+                        child: headingText(color: blue, size: 18, text: "Test"),
                       ),
                     ),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => QuizScreen(questions: set2Questions)),
+                          MaterialPageRoute(builder: (context) => StudyMaterialsPage()),
                         );
                       },
                       child: Container(
@@ -118,7 +106,7 @@ class QuizApp extends StatelessWidget {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(12),
                         ),
-                        child: headingText(color: blue, size: 18, text: "Test 2"),
+                        child: headingText(color: blue, size: 18, text: "Study Materials"),
                       ),
                     ),
                   ],

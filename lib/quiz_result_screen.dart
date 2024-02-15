@@ -31,14 +31,14 @@ class QuizResultScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   "Quiz Completed!",
                   style: TextStyle(color: Colors.white, fontSize: 28),
                 ),
                 const SizedBox(height: 20),
                 Text(
                   "Total Points: $totalPoints",
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                  style: const TextStyle(color: Colors.white, fontSize: 20),
                 ),
                 const SizedBox(height: 20),
                 LinearProgressIndicator(
@@ -49,14 +49,14 @@ class QuizResultScreen extends StatelessWidget {
                 const SizedBox(height: 20),
                 Text(
                   "Accuracy: ${percentage.toStringAsFixed(2)}%",
-                  style: TextStyle(color: Colors.white, fontSize: 18),
+                  style: const TextStyle(color: Colors.white, fontSize: 18),
                 ),
                 const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.popUntil(context, (route) => route.isFirst);
                   },
-                  child: Text("Back to Main Screen"),
+                  child: const Text("Back to Main Screen"),
                 ),
               ],
             ),
