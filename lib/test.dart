@@ -1,3 +1,4 @@
+// test.dart
 import 'package:flutter/material.dart';
 import 'package:demo_application/const/colors.dart';
 import 'package:demo_application/const/text_style.dart';
@@ -11,9 +12,11 @@ class TestPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    String base = "assets/images/"; // Change this to the actual base path for your images
 
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Test Page'),
+      ),
       body: SafeArea(
         child: Container(
           width: double.infinity,
@@ -34,22 +37,6 @@ class TestPage extends StatelessWidget {
                 Icons.assignment,
                 size: 100, // Adjust the size as needed
                 color: Colors.white,
-              ),
-              const SizedBox(height: 20),
-              // Button to go back home below the icon
-              ElevatedButton.icon(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: Icon(Icons.home),
-                label: Text('Back to Home'),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.white,
-                  onPrimary: blue,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
               ),
               const SizedBox(height: 20),
               // Test 1 container
