@@ -5,9 +5,6 @@ import 'package:demo_application/const/colors.dart';
 import 'package:demo_application/navbar.dart'; // Import your custom bottom navigation bar
 import 'package:demo_application/const/images.dart';
 import 'package:demo_application/const/text_style.dart';
-import 'package:demo_application/quiz_screen.dart';
-import 'package:demo_application/set1.dart';
-import 'package:demo_application/set2.dart';
 import 'package:demo_application/test.dart';
 import 'package:demo_application/study_materials.dart'; // Import the StudyMaterialsPage
 
@@ -43,9 +40,9 @@ class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = [
-    HomePage(),
-    StudyMaterialsPage(),
-    TestPage(),
+    const HomePage(),
+   const StudyMaterialsPage(),
+    const TestPage(),
   ];
 
   @override
@@ -128,7 +125,7 @@ class HomePage extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => StudyMaterialsPage()),
+                          MaterialPageRoute(builder: (context) => const StudyMaterialsPage()),
                         );
                       },
                       child: Container(

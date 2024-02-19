@@ -13,9 +13,11 @@ class QuizScreen extends StatefulWidget {
   State<QuizScreen> createState() => _QuizScreenState();
 }
 
-class _QuizScreenState extends State<QuizScreen> {
+class _QuizScreenState extends State<QuizScreen>
+    with TickerProviderStateMixin {
   var currentQuestionIndex = 0;
-  int seconds = 60;
+  int quizDuration = 1800; // 30 minutes in seconds
+  int seconds = 1800;
   Timer? timer;
 
   int points = 0;
@@ -65,9 +67,6 @@ class _QuizScreenState extends State<QuizScreen> {
     isLoaded = false;
     resetColors();
     userSelectedIndex = null; // Reset user selection
-    timer!.cancel();
-    seconds = 60;
-    startTimer();
 
     if (currentQuestionIndex < quizQuestions.length - 1) {
       currentQuestionIndex++;
@@ -156,14 +155,14 @@ class _QuizScreenState extends State<QuizScreen> {
                 alignment: Alignment.center,
                 children: [
                   Text(
-                    "$seconds",
+                    "${(seconds ~/ 60).toString().padLeft(2, '0')}:${(seconds % 60).toString().padLeft(2, '0')}",
                     style: const TextStyle(color: Colors.white, fontSize: 24),
                   ),
                   SizedBox(
                     width: 80,
                     height: 80,
                     child: CircularProgressIndicator(
-                      value: seconds / 60,
+                      value: seconds / 1800,
                       valueColor: const AlwaysStoppedAnimation(Colors.white),
                     ),
                   ),
@@ -205,7 +204,6 @@ class _QuizScreenState extends State<QuizScreen> {
                         gotoNextQuestion();
                       });
                     } else {
-                      timer!.cancel();
                       // Handle quiz completion
                       showResult();
                     }

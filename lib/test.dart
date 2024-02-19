@@ -33,7 +33,7 @@ class TestPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               // Replace the image with a test icon
-              Icon(
+              const Icon(
                 Icons.assignment,
                 size: 100, // Adjust the size as needed
                 color: Colors.white,
