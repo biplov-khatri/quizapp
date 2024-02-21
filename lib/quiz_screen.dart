@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'quiz_question.dart';
-import 'quiz_result_screen.dart';
+import 'layouts/quiz_result_screen.dart';
 
 class QuizScreen extends StatefulWidget {
   final List<QuizQuestion> questions;

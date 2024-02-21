@@ -1,4 +1,4 @@
-import 'quiz_question.dart';
+import '../quiz_question.dart';
 
 final List<QuizQuestion> set1Questions = [
   QuizQuestion(

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:demo_application/const/colors.dart';
 import 'package:demo_application/const/text_style.dart';
 import 'package:demo_application/quiz_screen.dart';
-import 'package:demo_application/set1.dart';
-import 'package:demo_application/set2.dart';
+import 'package:demo_application/questions/set1.dart';
+import 'package:demo_application/questions/set2.dart';
 
 class TestPage extends StatelessWidget {
   const TestPage({Key? key}) : super(key: key);

@@ -1,7 +1,7 @@
 // settings.dart
 
 import 'package:flutter/material.dart';
-import 'theme_provider.dart';
+import 'layouts/theme_provider.dart';
 
 class AppSettings {
   static ThemeProvider themeProvider = ThemeProvider();

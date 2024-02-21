@@ -3,13 +3,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:demo_application/const/colors.dart';
-import 'package:demo_application/navbar.dart';
+import 'package:demo_application/layouts/navbar.dart';
 import 'package:demo_application/const/images.dart';
 import 'package:demo_application/const/text_style.dart';
 import 'package:demo_application/test.dart';
 import 'package:demo_application/study_materials.dart';
 import 'package:demo_application/settings.dart';
-import 'package:demo_application/theme_provider.dart';
+import 'package:demo_application/layouts/theme_provider.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: blue));
