@@ -2,11 +2,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:demo_application/const/colors.dart';
-import 'package:demo_application/navbar.dart'; // Import your custom bottom navigation bar
+import 'package:demo_application/navbar.dart';
 import 'package:demo_application/const/images.dart';
 import 'package:demo_application/const/text_style.dart';
 import 'package:demo_application/test.dart';
-import 'package:demo_application/study_materials.dart'; // Import the StudyMaterialsPage
+import 'package:demo_application/study_materials.dart';
+import 'package:demo_application/settings.dart'; // Import the AppSettings class
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: blue));
@@ -21,10 +22,8 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const MainScreen(),
-      theme: ThemeData(
-        fontFamily: "quick",
-      ),
-      title: "Demo",
+      theme: AppSettings.darkMode ? AppSettings.getDarkTheme() : AppSettings.getTheme(),
+      title: "Driving test",
     );
   }
 }
@@ -41,7 +40,7 @@ class _MainScreenState extends State<MainScreen> {
 
   final List<Widget> _pages = [
     const HomePage(),
-   const StudyMaterialsPage(),
+    const StudyMaterialsPage(),
     const TestPage(),
   ];
 
@@ -55,6 +54,11 @@ class _MainScreenState extends State<MainScreen> {
           setState(() {
             _currentIndex = index;
           });
+        },
+        onDarkModeToggle: (isDarkModeEnabled) {
+          // Handle dark mode toggle
+          AppSettings.darkMode = isDarkModeEnabled;
+          setState(() {}); // Refresh the UI when dark mode is toggled
         },
       ),
     );

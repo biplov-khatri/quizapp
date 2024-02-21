@@ -1,13 +1,18 @@
+// navbar.dart
+
 import 'package:flutter/material.dart';
+import 'settings.dart'; // Import your settings.dart file
 
 class CustomBottomNavBar extends StatefulWidget {
   final int currentIndex;
   final Function(int) onTap;
+  final Function(bool) onDarkModeToggle;
 
   const CustomBottomNavBar({
     Key? key,
     required this.currentIndex,
     required this.onTap,
+    required this.onDarkModeToggle,
   }) : super(key: key);
 
   @override
@@ -36,13 +41,20 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar>
     return BottomNavigationBar(
       currentIndex: widget.currentIndex,
       onTap: (index) {
-        widget.onTap(index);
-        _playAnimation();
+        if (index == 3) {
+          // If the Settings icon is tapped (assuming it's at index 3),
+          // open the SettingsScreen.
+          openSettingsScreen(context);
+        } else {
+          widget.onTap(index);
+          _playAnimation();
+        }
       },
       items: [
         _buildNavItem(Icons.home, 'Home', 0),
         _buildNavItem(Icons.book, 'Study', 1),
         _buildNavItem(Icons.assignment, 'Tests', 2),
+        _buildSettingsNavItem(),
       ],
       selectedItemColor: Colors.blue,
       unselectedItemColor: Colors.grey,
@@ -56,8 +68,10 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar>
     return BottomNavigationBarItem(
       icon: GestureDetector(
         onTap: () {
-          widget.onTap(index);
-          _playAnimation();
+          if (index != 3) {
+            widget.onTap(index);
+            _playAnimation();
+          }
         },
         child: AnimatedBuilder(
           animation: Tween<double>(begin: 1, end: 0.95).animate(
@@ -84,9 +98,50 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar>
     );
   }
 
+  BottomNavigationBarItem _buildSettingsNavItem() {
+    return BottomNavigationBarItem(
+      icon: GestureDetector(
+        onTap: () {
+          // If the Settings icon is tapped, open the SettingsScreen.
+          openSettingsScreen(context);
+          _playAnimation();
+        },
+        child: AnimatedBuilder(
+          animation: Tween<double>(begin: 1, end: 0.95).animate(
+            CurvedAnimation(
+              parent: CurvedAnimation(
+                parent: _animationController,
+                curve: Curves.easeInOut,
+              ),
+              curve: Curves.easeInOut,
+            ),
+          ),
+          builder: (context, child) {
+            return Transform.translate(
+              offset: 3 == widget.currentIndex
+                  ? Offset(0, 5 * _animationController.value)
+                  : Offset.zero,
+              child: child,
+            );
+          },
+          child: Icon(Icons.settings),
+        ),
+      ),
+      label: 'Settings',
+    );
+  }
+
   @override
   void dispose() {
     _animationController.dispose();
     super.dispose();
   }
+}
+
+// Function to open the SettingsScreen
+void openSettingsScreen(BuildContext context) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => SettingsScreen()),
+  );
 }
