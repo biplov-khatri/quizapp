@@ -1,4 +1,5 @@
 // main.dart
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:demo_application/const/colors.dart';
@@ -7,7 +8,8 @@ import 'package:demo_application/const/images.dart';
 import 'package:demo_application/const/text_style.dart';
 import 'package:demo_application/test.dart';
 import 'package:demo_application/study_materials.dart';
-import 'package:demo_application/settings.dart'; // Import the AppSettings class
+import 'package:demo_application/settings.dart';
+import 'package:demo_application/theme_provider.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: blue));
@@ -22,7 +24,9 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const MainScreen(),
-      theme: AppSettings.darkMode ? AppSettings.getDarkTheme() : AppSettings.getTheme(),
+      theme: AppSettings.themeProvider.currentTheme == ThemeMode.dark
+          ? AppSettings.getDarkTheme()
+          : AppSettings.getTheme(),
       title: "Driving test",
     );
   }
@@ -56,8 +60,7 @@ class _MainScreenState extends State<MainScreen> {
           });
         },
         onDarkModeToggle: (isDarkModeEnabled) {
-          // Handle dark mode toggle
-          AppSettings.darkMode = isDarkModeEnabled;
+          AppSettings.themeProvider.toggleDarkMode(isDarkModeEnabled);
           setState(() {}); // Refresh the UI when dark mode is toggled
         },
       ),

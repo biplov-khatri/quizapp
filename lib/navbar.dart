@@ -1,7 +1,7 @@
 // navbar.dart
 
 import 'package:flutter/material.dart';
-import 'settings.dart'; // Import your settings.dart file
+import 'settings.dart';
 
 class CustomBottomNavBar extends StatefulWidget {
   final int currentIndex;
@@ -42,8 +42,6 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar>
       currentIndex: widget.currentIndex,
       onTap: (index) {
         if (index == 3) {
-          // If the Settings icon is tapped (assuming it's at index 3),
-          // open the SettingsScreen.
           openSettingsScreen(context);
         } else {
           widget.onTap(index);
@@ -102,7 +100,6 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar>
     return BottomNavigationBarItem(
       icon: GestureDetector(
         onTap: () {
-          // If the Settings icon is tapped, open the SettingsScreen.
           openSettingsScreen(context);
           _playAnimation();
         },
@@ -138,7 +135,6 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar>
   }
 }
 
-// Function to open the SettingsScreen
 void openSettingsScreen(BuildContext context) {
   Navigator.push(
     context,

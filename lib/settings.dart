@@ -1,8 +1,11 @@
 // settings.dart
+
 import 'package:flutter/material.dart';
+import 'theme_provider.dart';
 
 class AppSettings {
-  static bool darkMode = false;
+  static ThemeProvider themeProvider = ThemeProvider();
+  // other settings...
 
   static ThemeData getTheme() {
     return ThemeData(
@@ -23,9 +26,12 @@ class AppSettings {
   }
 }
 
-class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({Key? key}) : super(key: key);
+class SettingsScreen extends StatefulWidget {
+  @override
+  _SettingsScreenState createState() => _SettingsScreenState();
+}
 
+class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,33 +50,50 @@ class SettingsScreen extends StatelessWidget {
             const SizedBox(height: 10),
             SwitchListTile(
               title: const Text('Enable Dark Mode'),
-              value: AppSettings.darkMode,
+              value: AppSettings.themeProvider.currentTheme == ThemeMode.dark,
               onChanged: (value) {
                 // Update the dark mode setting
-                AppSettings.darkMode = value;
-
-                // Notify the framework that the state has changed
-                if (value) {
-                  // If dark mode is enabled, you can apply a dark theme here
-                  // e.g., ThemeMode.dark or update specific theme properties
-                  // based on your implementation.
-                  // Apply your dark theme here:
-                  // MyAppState.setTheme(AppSettings.getDarkTheme());
-                } else {
-                  // If dark mode is disabled, you can apply a light theme here
-                  // e.g., ThemeMode.light or update specific theme properties
-                  // based on your implementation.
-                  // Apply your light theme here:
-                  // MyAppState.setTheme(AppSettings.getTheme());
-                }
-
-                // You may also use Provider or any other state management solution
-                // to handle the theme changes globally in your app.
+                AppSettings.themeProvider.toggleDarkMode(value);
+                // Trigger a rebuild of the widget tree
+                setState(() {});
               },
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                // Toggle dark mode when the button is pressed
+                AppSettings.themeProvider.toggleDarkMode(
+                    AppSettings.themeProvider.currentTheme != ThemeMode.dark);
+                // Trigger a rebuild of the widget tree
+                setState(() {});
+              },
+              child: Text(
+                'Toggle Dark Mode',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ],
         ),
       ),
     );
   }
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final ThemeData currentTheme = AppSettings.themeProvider.currentTheme == ThemeMode.dark
+        ? AppSettings.getDarkTheme()
+        : AppSettings.getTheme();
+
+    return MaterialApp(
+      title: 'My App',
+      theme: currentTheme,
+      home: SettingsScreen(),
+    );
+  }
+}
+
+void main() {
+  runApp(MyApp());
 }
