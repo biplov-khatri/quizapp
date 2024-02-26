@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'quiz_question.dart';
-import 'layouts/quiz_result_screen.dart';
+import '../quiz_question.dart';
+import 'quiz_result_screen.dart';
 
 class QuizScreen extends StatefulWidget {
   final List<QuizQuestion> questions;
@@ -13,8 +13,7 @@ class QuizScreen extends StatefulWidget {
   State<QuizScreen> createState() => _QuizScreenState();
 }
 
-class _QuizScreenState extends State<QuizScreen>
-    with TickerProviderStateMixin {
+class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
   var currentQuestionIndex = 0;
   int quizDuration = 1800; // 30 minutes in seconds
   int seconds = 1800;
@@ -240,7 +239,7 @@ class _QuizScreenState extends State<QuizScreen>
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Text(
-                "Correct Answer: $correctAnswer",
+                "Correct Answer: $correctAnswer\nRemark: ${currentQuestion.remark}", // Displaying the remark
                 style: const TextStyle(color: Colors.white, fontSize: 18),
               ),
             ),
