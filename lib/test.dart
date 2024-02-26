@@ -1,10 +1,9 @@
-// test.dart
 import 'package:flutter/material.dart';
 import 'package:demo_application/const/colors.dart';
 import 'package:demo_application/const/text_style.dart';
-import 'package:demo_application/quiz_screen.dart';
-import 'package:demo_application/questions/set1.dart';
-import 'package:demo_application/questions/set2.dart';
+import 'package:demo_application/layouts/quiz_screen.dart';
+import 'package:demo_application/questions/set1.dart' as set1;
+import 'package:demo_application/questions/set2.dart' as set2;
 
 class TestPage extends StatelessWidget {
   const TestPage({Key? key}) : super(key: key);
@@ -44,7 +43,7 @@ class TestPage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => QuizScreen(questions: set1Questions)),
+                    MaterialPageRoute(builder: (context) => QuizScreen(questions: set1.set1Questions)),
                   );
                 },
                 child: Container(
@@ -63,7 +62,7 @@ class TestPage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => QuizScreen(questions: set2Questions)),
+                    MaterialPageRoute(builder: (context) => QuizScreen(questions: set2.set2Questions)),
                   );
                 },
                 child: Container(
