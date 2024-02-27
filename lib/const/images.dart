@@ -3,3 +3,7 @@ const String elephant = "${base}elephant.jpeg";
 const String balloon = "${base}balloon.png";
 const String ideas = "${base}ideas.png";
 const String balloon2 = "${base}balloon2.png";
+const String image1 = "${base}image1.png";
+const String image2 = "${base}image2.png";
+const String image3 = "${base}image3.png";
+const String image4 = "${base}image4.png";

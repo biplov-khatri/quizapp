@@ -2,185 +2,174 @@ import '../quiz_question.dart';
 
 final List<QuizQuestion> set2Questions = [
   QuizQuestion(
-      question: "Roads are public places, and selfish driving can be a nuisance to those around you and cause traffic accidents, so when driving, you need to think about the other person and drive with compassion and compassion.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "When driving, think not only about yourself but also about your surroundings."
+    question: "You must obey the hand signals of the police officers, but you do not have to obey the hand signals of the traffic patrol.",
+    options: ["True", "False"],
+    correctAnswer: "False",
+    remark: "You must also obey the hand signals of the traffic patrol.",
+  ),
+
+  QuizQuestion(
+    question: "If it is a green light, all cars can go straight, turn left, and turn right.",
+    options: ["True", "False"],
+    correctAnswer: "False",
+    remark: "Vehicles also include certain small motorized bicycles and light vehicles. As a general rule, specified small motorized bicycles and light vehicles can only go straight and turn left.",
+  ),
+
+  QuizQuestion(
+    question: "A yellow traffic light does not mean 'stop', so even if you can stop safely, you can continue to pass if you are in a hurry.",
+    options: ["True", "False"],
+    correctAnswer: "False",
+    remark: "The principle is to stop, so you have to stop when it is safe to stop.However, if you can't stop safely, you can proceed.",
+  ),
+
+  QuizQuestion(
+    question: "The car behind me was getting quite close, but the traffic light turned yellow and I stopped immediately.",
+    options: ["True", "False"],
+    correctAnswer: "True",
+    remark: "If there is a risk of being rear-ended by the car behind you, continue on.",
+  ),
+
+  QuizQuestion(
+    question: "Even if the traffic light at the end of the left turn is a red light, you can continue on.",
+    options: ["True", "False"],
+    correctAnswer: "True",
+    remark: "You can proceed even if the traffic light at the end of the left turn is a red light.",
+  ),
+
+  QuizQuestion(
+    question: "In the case of a green arrow signal pointing to the right, it is possible to turn in addition to turning right.",
+    options: ["True", "False"],
+    correctAnswer: "True",
+    remark: "You can also turn around.",
+  ),
+
+  QuizQuestion(
+    question: "If the traffic light is a green arrow pointing to the right, you can turn right, so light vehicles and motorized bicycles that make a two-step right turn can also proceed.",
+    options: ["True", "False"],
+    correctAnswer: "False",
+    remark: "At the green arrow traffic light pointing to the right, cars that make a two-step right turn cannot proceed.",
+  ),
+
+  QuizQuestion(
+    question: "At the yellow light arrow signal, the car can go in the direction of the arrow.",
+    options: ["True", "False"],
+    correctAnswer: "False",
+    remark: "The yellow arrow signal is only available to trams. The car cannot proceed.",
+  ),
+
+  QuizQuestion(
+    question: "When the traffic light is flashing yellow, you must be careful of other traffic and pass slowly.",
+    options: ["True", "False"],
+    correctAnswer: "False",
+    remark: "There is no obligation to go slowly, so it is not necessary to go slowly.",
+  ),
+
+  QuizQuestion(
+    question: "At the intersection, the road we were approaching was a priority road, and it was a flashing red light signal, but it seemed safe, so we went slowly and passed.",
+    options: ["True", "False"],
+    correctAnswer: "False",
+    remark: "You are obliged to stop, so you have to stop even if there is no car.",
+  ),
+
+  QuizQuestion(
+    question: "At a traffic light with a sign that says 'For buses only', it is a traffic light for buses only, so vehicles other than buses should not follow it.",
+    options: ["True", "False"],
+    correctAnswer: "False",
+    remark: "If there is a special sign, the designated car will follow the traffic light.",
+  ),
+
+  QuizQuestion(
+    question: "If a police officer does this at an intersection, traffic parallel to the front of the police officer's body is synonymous with a yellow light.",
+    options: ["True", "False"],
+    correctAnswer: "False",
+    remark: "Traffic parallel to the front of the police officer's body is a green light.",
+    imagePath: "/Users/biplovkhatri/Downloads/Quiz App/assets/image_1.png",
+  ),
+
+  QuizQuestion(
+    question: "In this figure, the direction of the arrow has the same meaning as the green light of the traffic light.",
+    options: ["True", "False"],
+    correctAnswer: "True",
+    remark: "When you come face to face with the front of a police officer's body, it is a red light, even if you have your hands down.",
+    imagePath: "/Users/biplovkhatri/Downloads/Quiz App/assets/image_2.png",
+  ),
+
+  QuizQuestion(
+    question: "If a police officer does this at an intersection, traffic that intersects with traffic parallel to the front of the police officer's body is synonymous with a green light.",
+    options: ["True", "False"],
+    correctAnswer: "False",
+    remark: "It has the same meaning as a red light.",
+    imagePath: "/Users/biplovkhatri/Downloads/Quiz App/assets/image_3.png", // Please replace with the correct image path
+  ),
+
+  QuizQuestion(
+    question: "In this figure, traffic in the direction of the arrow has the same meaning as the yellow light signal.",
+    options: ["False", "True"],
+    correctAnswer: "True",
+    remark: "Traffic in the opposite direction is a red light.",
+    imagePath: "../assets/image_4.png", // Please replace with the correct image path
   ),
   QuizQuestion(
-      question: "When a 12-year-old child is allowed to ride in a car, the child must be allowed to use a car seat.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "Infants (children under 6 years old) must use a car seat, but children under the age of 12 do not necessarily have to use a car seat."
+    question: "If there is a 'stop line' sign, the stop position is immediately before the sign.",
+    options: ["True", "False"],
+    correctAnswer: "True",
+    remark: "If there is a 'stop line' sign, the stop position is immediately before the sign.",
   ),
   QuizQuestion(
-      question: "When placing a child under 6 years of age in the front passenger seat, the child seat should be installed facing forward and the seat should be lowered to the back.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "If the child seat is used in the front passenger seat, it should be installed forward-facing, and the seat should be lowered to the back."
+    question: "The stop position at an intersection where there is no stop line is just before the intersection.",
+    options: ["True", "False"],
+    correctAnswer: "True",
+    remark: "At an intersection where there is no stop line, the stop position is just before the intersection.",
   ),
   QuizQuestion(
-      question: "If you cause a violation or accident, you will be held criminal, administrative, and civil liable, but if you have car insurance, the insurance company will be held civilly liable.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "The driver is responsible for violations and accidents."
+    question: "In a place other than an intersection where there was no pedestrian crossing, the traffic patrol officer gave a signal to stop with a hand signal, so I stopped 1 meter before the traffic patrol.",
+    options: ["True", "False"],
+    correctAnswer: "True",
+    remark: "When a traffic patrol officer instructs you to stop in the middle of nowhere with a hand signal, stop 1 meter in front of the traffic patrolman.",
   ),
   QuizQuestion(
-      question: "In the event of an accident, it is important to take out not only compulsory insurance but also optional insurance.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "There is a limit to compulsory insurance, so be sure to take out optional insurance as well."
+    question: "If a police officer is signaling a red light at an intersection, he or she must stop 1 meter in front of the police officer.",
+    options: ["False", "True"],
+    correctAnswer: "False",
+    remark: "A police officer is giving a hand signal at the intersection, so you have to stop just before the intersection.",
   ),
   QuizQuestion(
-      question: "Drunk driving has a negative impact on all of the cognition, judgment, and operation necessary for driving, and there is a great risk of a tragic accident, so you should never do it.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "Never drink and drive."
+    question: "If a police officer is using a hand signal that is different from the traffic light, you must obey the police officer.",
+    options: ["True", "False"],
+    correctAnswer: "True",
+    remark: "If the police officer and the traffic light are different, follow the instructions of the police officer.",
   ),
   QuizQuestion(
-      question: "Drunk driving is the responsibility of the driver, so the passenger is not responsible at all.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "Passengers are also responsible."
+    question: "If the security guard is guiding you differently from the traffic light, you must obey the security guard.",
+    options: ["True", "False"],
+    correctAnswer: "False",
+    remark: "A security guard is not a police officer. The security guards are only guiding, so in this case, they must obey the signals.",
   ),
   QuizQuestion(
-      question: "The purpose of the Road Traffic Act is to prevent hazards on the road and to ensure the safety and smoothness of traffic, not to prevent traffic pollution.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "It is also to prevent traffic pollution."
+    question: "At an intersection, if there is a sign with a blue arrow pointing to the left on a white background, you may turn left while paying attention to pedestrians and other traffic around you (including light vehicles and motorized bicycles).",
+    options: ["True", "False"],
+    correctAnswer: "True",
+    remark: "The white background with a blue arrow pointing to the left is a sign board that says 'Turn left allowed', so you can turn left while paying attention to the traffic around you.",
   ),
   QuizQuestion(
-      question: "When driving for a long time, it is better to make a driving plan to take a break at least once every two hours.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "When driving for long periods of time, do not overdo it and take a break at least once every two hours."
+    question: "Even if a police officer is using a hand signal that means the same as a red light, if there is a sign that says 'Turn left allowed', you can turn left by paying attention to the traffic around you.",
+    options: ["True", "False"],
+    correctAnswer: "True",
+    remark: "Even if a police officer is giving a red light, you can turn left if there is a sign that says 'Turn left allowed'.",
   ),
   QuizQuestion(
-      question: "Do not drive a car when you are overworked.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "Overworked driving is prohibited."
+    question: "If the traffic light next to you turns red at an intersection, the traffic light facing you will immediately turn green, so you can start off.",
+    options: ["False", "True"],
+    correctAnswer: "False",
+    remark: "It doesn't necessarily turn green right away, so don't start off like that.",
   ),
   QuizQuestion(
-      question: "If you are comfortable wearing them, you can drive in bald or high heels.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "Do not drive in bald or high heels."
-  ),
-  QuizQuestion(
-      question: "When driving a two-wheeled vehicle, it is better to wear light clothes because it is hot in summer.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "Motorcycles are at risk of falling, so be sure to drive in a way that minimizes body exposure."
-  ),
-  QuizQuestion(
-      question: "When driving a two-wheeled vehicle, you may drive in bald or sandals.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "Do not drive on a motorcycle with baldness or sandals."
-  ),
-  QuizQuestion(
-      question: "When driving a motorcycle, wear a helmet with the JIS mark or PSC mark, and make sure that the chin strap is fastened.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "Use a riding helmet with the JIS mark or PSC mark to ensure that the chin strap is fastened."
-  ),
-  QuizQuestion(
-      question: "Even a helmet that has been subjected to a strong impact once may be used as long as it is not particularly broken.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "Once subjected to a strong impact, it should not be used because its function has deteriorated."
-  ),
-  QuizQuestion(
-      question: "I wore a construction safety hat and drove a motorized bicycle.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "A construction safety hat is not a riding helmet."
-  ),
-  QuizQuestion(
-      question: "Seat belts must be worn by those who sit in the driver's and passenger's seats, but those who sit in the back seats do not.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "Passengers in the back seat must also wear it."
-  ),
-  QuizQuestion(
-      question: "When reversing a motor vehicle, the driver may unfasten his seat belt.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "When reversing, only the driver can unfasten his seatbelt."
-  ),
-  QuizQuestion(
-      question: "If you are pregnant, you do not need to wear a seat belt.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "Even during pregnancy, you are obliged to wear a seatbelt. However, if there is a doctor's diagnosis due to reasons such as affecting the fetus, the wearing of a seat belt is exempt."
-  ),
-  QuizQuestion(
-      question: "If your car is equipped with an airbag, you don't have to wear a seat belt because the airbag will protect you in the unlikely event of an accident.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "Seat belts must be worn even in cars with airbags."
-  ),
-  QuizQuestion(
-      question: "If the conditions of your driver's license include 'glasses, etc.,' you must wear glasses or contact lenses when driving a car.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "You must wear glasses or contact lenses."
-  ),
-  QuizQuestion(
-      question: "The automobile inspection certificate and liability insurance certificate are important documents, so keep them at home so that you do not lose them.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "It must be installed in the car."
-  ),
-  QuizQuestion(
-      question: "For motorized bicycles, a copy of the automobile liability insurance certificate or mutual aid certificate should be provided in the car.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "Copying is not good. The original must be provided."
-  ),
-  QuizQuestion(
-      question: "When driving a motor vehicle, it must be equipped with equipment such as flares and stop signs.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "Prepare the necessary equipment in case of an accident or breakdown."
-  ),
-  QuizQuestion(
-      question: "I answered the phone when I received a call on my cell phone while I was stopped at a red light, but the light turned green, so I started while calling as it was.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "Do not drive while talking on a cell phone."
-  ),
-  QuizQuestion(
-      question: "Do not use a mobile phone or the like for talking while driving, but you may use it as long as it is hands-free.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "You can use it as long as it is hands-free."
-  ),
-  QuizQuestion(
-      question: "If you get lost while driving, there is a risk of poor traffic flow and accidents, so it is better to always check the road while watching the car navigation system.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "Do not drive while keeping an eye on the car navigation system."
-  ),
-  QuizQuestion(
-      question: "It was about to freeze when I watered the road, but it is good to water it to prevent dust from rising.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "Do not water the road when there is a risk of freezing."
-  ),
-  QuizQuestion(
-      question: "On busy roads, you can play on roller skates or skateboards.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "Do not roller skate in heavy traffic."
-  ),
-  QuizQuestion(
-      question: "If it is a sidewalk, you may place products.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "Do not leave luggage or merchandise on the sidewalk."
+    question: "Even if the light turns green, there may be remaining pedestrians, so check carefully before starting.",
+    options: ["True", "False"],
+    correctAnswer: "True",
+    remark: "There are pedestrians who are in the middle of crossing the street and pedestrians who are crossing in a hurry, so check carefully before starting off.",
   ),
 
 
 ];
+

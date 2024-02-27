@@ -178,6 +178,14 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
             ),
           ),
           const SizedBox(height: 20),
+          // Check if image path is provided
+          if (currentQuestion.imagePath != null)
+            Image.asset(
+              currentQuestion.imagePath!,
+              width: size.width - 100,
+              height: size.height * 0.2,
+              fit: BoxFit.cover,
+            ),
           Text(
             currentQuestion.question,
             style: const TextStyle(color: Colors.white, fontSize: 20),
