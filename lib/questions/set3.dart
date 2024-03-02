@@ -7,6 +7,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["false", "true"],
     correctAnswer: "true",
     remark: "The 'Road Closed' sign means that pedestrians, remote-controlled small cars, cars, and trams are all closed to traffic. Cars are not allowed to enter (pass) in places with these signs.",
+    imagePath: "assets/3_1.png",
   ),
 
   QuizQuestion(
@@ -14,6 +15,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["true", "false"],
     correctAnswer: "true",
     remark: "Cars are not allowed to enter (pass) either of them. This sign means 'closed to traffic for medium-sized lorries, etc.'",
+    imagePath: "assets/3_2.png",
   ),
 
   QuizQuestion(
@@ -21,6 +23,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["false", "true"],
     correctAnswer: "false",
     remark: "It is a sign that means 'closed to large lorries, etc.'",
+    imagePath: "assets/3_3_png",
   ),
 
   QuizQuestion(
@@ -28,6 +31,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["true", "false"],
     correctAnswer: "true",
     remark: "Lorries and large special-purpose vehicles with a weight greater than or equal to the indicated on the auxiliary signs are not allowed to pass.",
+    imagePath: "assets/3_4.png",
   ),
 
   QuizQuestion(
@@ -35,6 +39,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["true", "false"],
     correctAnswer: "false",
     remark: "General motorized bicycles are also not allowed to pass.",
+    imagePath: "assets/3_5.png",
   ),
 
   QuizQuestion(
@@ -42,6 +47,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["true", "false"],
     correctAnswer: "true",
     remark: "You must go in the direction indicated by the arrow.",
+    imagePath: "assets/3_6.png",
   ),
 
   QuizQuestion(
@@ -49,6 +55,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["false", "true"],
     correctAnswer: "false",
     remark: "Even if it is your own garage or home, you cannot cross to the right side of the road.",
+    imagePath: "assets/3_7.png",
   ),
 
   QuizQuestion(
@@ -56,6 +63,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["true", "false"],
     correctAnswer: "true",
     remark: "When this sign is present, it is not possible to overtake by overtaking on the right part of the road.",
+    imagePath: "assets/3_8.png",
   ),
 
   QuizQuestion(
@@ -63,6 +71,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["true", "false"],
     correctAnswer: "true",
     remark: "Cars with a gross vehicle weight of more than 5.5 tons are prohibited from passing, so if the gross vehicle weight is 5.5 tons, you can pass.",
+    imagePath: "assets/3_9.png",
   ),
 
   QuizQuestion(
@@ -70,6 +79,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["false", "true"],
     correctAnswer: "false",
     remark: "Since it is a 'maximum width' sign, cars with a width of more than 2.2 m are not allowed to pass.",
+    imagePath: "assets/3_10.png",
   ),
 
   QuizQuestion(
@@ -77,6 +87,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["true", "false"],
     correctAnswer: "true",
     remark: "Since the road is closed to passenger vehicles of specified medium-sized passenger cars and above, passenger vehicles with a seating capacity of 11 or more are not allowed to pass.",
+    imagePath: "assets/3_11.png",
   ),
 
   QuizQuestion(
@@ -84,6 +95,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["true", "false"],
     correctAnswer: "true",
     remark: "It is a 'minimum speed' sign, so you should not drive at a speed that does not reach 30 km/h.",
+    imagePath: "assets/3_12.png",
   ),
 
   QuizQuestion(
@@ -91,6 +103,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["false", "true"],
     correctAnswer: "false",
     remark: "It is not possible to park during the indicated hours.",
+    imagePath: "assets/3_13.png",
   ),
 
   QuizQuestion(
@@ -98,6 +111,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["false", "true"],
     correctAnswer: "false",
     remark: "This is the 'Bicycle Crossing' sign.",
+    imagePath: "assets/3_14.png",
   ),
 
   QuizQuestion(
@@ -105,6 +119,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["true", "false"],
     correctAnswer: "true",
     remark: "There are only two types: 'slow' and 'pause'.",
+    imagePath: "assets/3_15.png",
   ),
 
   QuizQuestion(
@@ -112,6 +127,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["true", "false"],
     correctAnswer: "true",
     remark: "It is a sign that represents 'priority road'.",
+    imagePath: "assets/3_16.png",
   ),
 
   QuizQuestion(
@@ -119,6 +135,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["false", "true"],
     correctAnswer: "false",
     remark: "It is a sign that indicates that the road is twisted.",
+    imagePath: "assets/3_17.png",
   ),
 
   QuizQuestion(
@@ -126,6 +143,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["false", "true"],
     correctAnswer: "false",
     remark: "It is a sign indicating that there is a railroad crossing.",
+    imagePath: "assets/3_18.png",
   ),
 
   QuizQuestion(
@@ -133,6 +151,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["false", "true"],
     correctAnswer: "false",
     remark: "It is a 'pedestrian crossing' sign.",
+    imagePath: "assets/3_19.png",
   ),
 
   QuizQuestion(
@@ -140,6 +159,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["false", "true"],
     correctAnswer: "false",
     remark: "It is not an intersection, but a warning sign that says 'merging traffic is available'.",
+    imagePath: "assets/3_20.png",
   ),
 
   QuizQuestion(
@@ -147,6 +167,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["true", "false"],
     correctAnswer: "true",
     remark: "It is an auxiliary sign of the 'beginning'.",
+    imagePath: "assets/3_21.png",
   ),
 
   QuizQuestion(
@@ -154,6 +175,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["false", "true"],
     correctAnswer: "false",
     remark: "It is an auxiliary sign that indicates the 'end'.",
+    imagePath: "assets/3_22.png",
   ),
 
   QuizQuestion(
@@ -161,6 +183,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["false", "true"],
     correctAnswer: "false",
     remark: "It is a regulatory sign indicating that parking is prohibited.",
+    imagePath: "assets/3_23.png",
   ),
 
   QuizQuestion(
@@ -168,6 +191,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["true", "false"],
     correctAnswer: "true",
     remark: "It should not be stopped because it is marked as a 'prohibited part'.",
+    imagePath: "assets/3_24.png",
   ),
 
   QuizQuestion(
@@ -175,6 +199,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["true", "false"],
     correctAnswer: "true",
     remark: "It is a sign that prohibits turning.",
+    imagePath: "assets/3_25.png",
   ),
 
   QuizQuestion(
@@ -182,6 +207,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["false", "true"],
     correctAnswer: "false",
     remark: "It is a sign that marks the end of the maximum speed limit of 50 km/h.",
+    imagePath: "assets/3_26.png",
   ),
 
   QuizQuestion(
@@ -189,6 +215,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["false", "true"],
     correctAnswer: "false",
     remark: "It is a sign of a 'safe zone'.",
+    imagePath: "assets/3_27.png",
   ),
 
   QuizQuestion(
@@ -196,6 +223,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["true", "false"],
     correctAnswer: "true",
     remark: "It is a sign of 'bicycle crossing zone'.",
+    imagePath: "assets/3_28.png",
   ),
 
   QuizQuestion(
@@ -203,6 +231,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["true", "false"],
     correctAnswer: "true",
     remark: "A sign indicating that the road ahead that intersects the road with this sign is a priority road.",
+    imagePath: "assets/3_29.png",
   ),
 
   QuizQuestion(
@@ -210,6 +239,7 @@ final List<QuizQuestion> set3Questions = [
     options: ["false", "true"],
     correctAnswer: "false",
     remark: "If a police officer gives a different instruction than the signs, follow the officer's instructions and pass.",
+
   ),
 
 

@@ -178,7 +178,7 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
             alignment: Alignment.centerLeft,
             child: Text(
               "Question ${currentQuestionIndex + 1} of ${quizQuestions.length}",
-              style: const TextStyle(color: Colors.grey, fontSize: 18),
+              style: const TextStyle(color: Colors.black, fontSize: 18),
             ),
           ),
           const SizedBox(height: 20),
