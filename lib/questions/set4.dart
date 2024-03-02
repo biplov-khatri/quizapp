@@ -24,7 +24,8 @@ final List<QuizQuestion> set4Questions = [
       question: "This roadside strip is open to pedestrians and light vehicles.",
       options: ["True", "False"],
       correctAnswer: "False",
-      remark: "Since it is a 'pedestrian roadside strip,' only pedestrians can pass."
+      remark: "Since it is a 'pedestrian roadside strip,' only pedestrians can pass.",
+    imagePath: "assets/4.1.png",
   ),
   QuizQuestion(
       question: "On roads without a centerline, cars must drive from the center to the left of the road.",
@@ -36,7 +37,8 @@ final List<QuizQuestion> set4Questions = [
       question: "This sign is not always in the middle of the road.",
       options: ["True", "False"],
       correctAnswer: "True",
-      remark: "The center line is not always in the middle of the road."
+      remark: "The center line is not always in the middle of the road.",
+    imagePath: "assets/4.2.png",
   ),
   QuizQuestion(
       question: "On one-way roads, high-speed vehicles should drive on the right side as much as possible.",
@@ -54,7 +56,8 @@ final List<QuizQuestion> set4Questions = [
       question: "If there is such a sign, the car must always drive on the right side of the road.",
       options: ["True", "False"],
       correctAnswer: "False",
-      remark: "It is not necessarily a sign to drive on the right side because it is possible to drive on the right side when it is not possible to pass only on the left side."
+      remark: "It is not necessarily a sign to drive on the right side because it is possible to drive on the right side when it is not possible to pass only on the left side.",
+      imagePath: "assets/4.3.png",
   ),
   QuizQuestion(
       question: "On roads without vehicular traffic zones, automobiles may travel anywhere to the left of the center line.",
@@ -78,13 +81,15 @@ final List<QuizQuestion> set4Questions = [
       question: "When such a traffic classification is indicated, traffic shall be carried out in accordance with it.",
       options: ["True", "False"],
       correctAnswer: "True",
-      remark: "If the traffic classification is specified by the sign, it will be followed."
+      remark: "If the traffic classification is specified by the sign, it will be followed.",
+    imagePath: "assets/4.4.png",
   ),
   QuizQuestion(
       question: "On roads with this sign, ordinary vehicles are not allowed to pass in the leftmost traffic zone.",
       options: ["True", "False"],
       correctAnswer: "False",
-      remark: "This is only a sign that indicates the traffic classification of a specific vehicle such as a large lorry, so it is not a dedicated traffic zone. So it doesn't matter if other cars pass in the left lane."
+      remark: "This is only a sign that indicates the traffic classification of a specific vehicle such as a large lorry, so it is not a dedicated traffic zone. So it doesn't matter if other cars pass in the left lane.",
+    imagePath: "assets/4.5.png",
   ),
   QuizQuestion(
       question: "When traffic is congested at an intersection where traffic control is not being carried out, it is possible to check the safety of oncoming vehicles and pass through the oncoming vehicle traffic zone.",
@@ -126,7 +131,8 @@ final List<QuizQuestion> set4Questions = [
       question: "If there is this sign, only ordinary cars can pass on the trackbed.",
       options: ["True", "False"],
       correctAnswer: "False",
-      remark: "Since it is a sign that cars are allowed to pass in the trackbed, it is not only ordinary cars."
+      remark: "Since it is a sign that cars are allowed to pass in the trackbed, it is not only ordinary cars.",
+    imagePath: "assets/4.6.png",
   ),
   QuizQuestion(
       question: "Vehicles are not allowed to pass in the trackbed under any circumstances unless there is a sign that says 'Passage is allowed in the trackbed'.",

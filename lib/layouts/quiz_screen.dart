@@ -258,9 +258,9 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Incorrect Answer",
-                    style: const TextStyle(color: Colors.black87, fontSize: 18, fontWeight: FontWeight.bold),
+                    style:  TextStyle(color: Colors.black87, fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 8),
                   Text(
@@ -289,12 +289,12 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
                   gotoNextQuestion();
                 });
               },
-              child: Text(
+              child: const Text(
                 'Next Question',
                 style: TextStyle(color: Colors.white),
               ),
               style: ElevatedButton.styleFrom(
-                primary: Colors.green,
+                backgroundColor: Colors.green,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),

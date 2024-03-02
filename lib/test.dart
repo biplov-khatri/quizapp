@@ -1,12 +1,13 @@
-import 'package:demo_application/questions/set3.dart';
-import 'package:demo_application/questions/set4.dart';
-import 'package:demo_application/questions/set5.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_application/const/colors.dart';
 import 'package:demo_application/const/text_style.dart';
 import 'package:demo_application/layouts/quiz_screen.dart';
 import 'package:demo_application/questions/set1.dart' as set1;
 import 'package:demo_application/questions/set2.dart' as set2;
+import 'package:demo_application/questions/set3.dart' as set3;
+import 'package:demo_application/questions/set4.dart' as set4;
+import 'package:demo_application/questions/set5.dart' as set5;
+import 'package:demo_application/questions/set6.dart' as set6;
 
 class TestPage extends StatelessWidget {
   const TestPage({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class TestPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Test Page'),
+        title: const Text('Chapter wise Test'),
       ),
       body: SafeArea(
         child: Container(
@@ -82,7 +83,7 @@ class TestPage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => QuizScreen(questions: set3Questions)),
+                    MaterialPageRoute(builder: (context) => QuizScreen(questions: set3.set3Questions)),
                   );
                 },
                 child: Container(
@@ -101,7 +102,7 @@ class TestPage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => QuizScreen(questions: set4Questions)),
+                    MaterialPageRoute(builder: (context) => QuizScreen(questions: set4.set4Questions)),
                   );
                 },
                 child: Container(
@@ -120,7 +121,7 @@ class TestPage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => QuizScreen(questions: set5Questions)),
+                    MaterialPageRoute(builder: (context) => QuizScreen(questions: set5.set5Questions)),
                   );
                 },
                 child: Container(
@@ -139,7 +140,7 @@ class TestPage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => QuizScreen(questions: set4Questions)),
+                    MaterialPageRoute(builder: (context) => QuizScreen(questions: set6.set6Questions)),
                   );
                 },
                 child: Container(
@@ -153,27 +154,6 @@ class TestPage extends StatelessWidget {
                   child: headingText(color: blue, size: 18, text: "Unit 6: Traffic at intersections, railroad crossings"),
                 ),
               ),
-
-              // Test 6 container
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => QuizScreen(questions: set4Questions)),
-                  );
-                },
-                child: Container(
-                  margin: const EdgeInsets.only(bottom: 20),
-                  width: size.width - 40,
-                  padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: headingText(color: blue, size: 18, text: "Unit 6: Traffic at intersections, railroad crossings"),
-                ),
-              ),
-
             ],
           ),
         ),

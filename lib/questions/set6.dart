@@ -24,7 +24,8 @@ final List<QuizQuestion> set6Questions = [
       question: "When turning right at an intersection marked in the figure, you must turn right according to the arrow on this marking.",
       options: ["True", "False"],
       correctAnswer: "True",
-      remark: "If the sign indicates how to turn right, follow it."
+      remark: "If the sign indicates how to turn right, follow it.",
+      imagePath: "assets/6_3.png",
   ),
   QuizQuestion(
       question: "A general motorized bicycle that makes a two-step right turn must give the signal to turn right until it goes straight to the place where it is to turn right.",
@@ -42,8 +43,10 @@ final List<QuizQuestion> set6Questions = [
       question: "According to this sign, general motorized bicycles must also turn right in the same way as bicycles turn right.",
       options: ["True", "False"],
       correctAnswer: "True",
-      remark: "At this sign, general motorized bicycles must make a two-step right turn in the same way as bicycles."
+      remark: "At this sign, general motorized bicycles must make a two-step right turn in the same way as bicycles.",
+      imagePath: "assets/6_5.png",
   ),
+
   QuizQuestion(
       question: "When I turned right at the intersection, a car was passing straight from the opposite direction, but I was at the intersection first, so I turned right first.",
       options: ["True", "False"],
@@ -60,13 +63,15 @@ final List<QuizQuestion> set6Questions = [
       question: "If you see this sign at an intersection, you can also turn right outside of the 7-9 hours.",
       options: ["True", "False"],
       correctAnswer: "True",
-      remark: "You do not need to follow this sign except during the time indicated by the auxiliary signs."
+      remark: "You do not need to follow this sign except during the time indicated by the auxiliary signs.",
+    imagePath: "assets/6_4.png",
   ),
   QuizQuestion(
       question: "When entering and exiting such off-road gas stations, there is no need to slow down.",
       options: ["True", "False"],
       correctAnswer: "False",
-      remark: "You must also slow down when turning left or right to get in and out of the road."
+      remark: "You must also slow down when turning left or right to get in and out of the road.",
+    imagePath: "assets/6_7.png",
   ),
   QuizQuestion(
       question: "A car driving in the traffic zone right next to me was signaling to change lanes, but I was in a hurry, so I passed first.",
@@ -84,7 +89,8 @@ final List<QuizQuestion> set6Questions = [
       question: "At such an intersection, car B can go ahead of car A.",
       options: ["True", "False"],
       correctAnswer: "True",
-      remark: "Car B is on the priority road, so you can pass first."
+      remark: "Car B is on the priority road, so you can pass first.",
+    imagePath: "assets/6_6.png",
   ),
   QuizQuestion(
       question: "At an intersection where traffic control is not being implemented, if the intersecting road is a priority road, the vehicle must always stop so as not to obstruct the passage of vehicles on the priority road.",
@@ -102,13 +108,17 @@ final List<QuizQuestion> set6Questions = [
       question: "At such intersections of roads of similar width, motorized bicycles must give way to ordinary vehicles.",
       options: ["True", "False"],
       correctAnswer: "False",
-      remark: "At intersections of the same width, priority is given to the left, so mopeds can pass first."
+      remark: "At intersections of the same width, priority is given to the left, so mopeds can pass first.",
+    imagePath: "assets/6_2.png",
+
   ),
   QuizQuestion(
       question: "At such intersections, trams have priority",
       options: ["True", "False"],
       correctAnswer: "False",
-      remark: "If the road width is the same intersection, the tram will have priority, but if the road width is different, the car on the wide road will have priority."
+      remark: "If the road width is the same intersection, the tram will have priority, but if the road width is different, the car on the wide road will have priority.",
+    imagePath: "assets/6_1.png",
+
   ),
   QuizQuestion(
       question: "At an intersection, if there is a 'stop' sign but no stop line, the stop position is immediately before the 'stop' sign.",
