@@ -83,7 +83,7 @@ final List<QuizQuestion> set2Questions = [
     options: ["True", "False"],
     correctAnswer: "False",
     remark: "Traffic parallel to the front of the police officer's body is a green light.",
-    imagePath: "/Users/biplovkhatri/Downloads/Quiz App/assets/image_1.png",
+    imagePath: "assets/image_1.png",
   ),
 
   QuizQuestion(
@@ -91,7 +91,7 @@ final List<QuizQuestion> set2Questions = [
     options: ["True", "False"],
     correctAnswer: "True",
     remark: "When you come face to face with the front of a police officer's body, it is a red light, even if you have your hands down.",
-    imagePath: "/Users/biplovkhatri/Downloads/Quiz App/assets/image_2.png",
+    imagePath: "assets/image_2.png",
   ),
 
   QuizQuestion(
@@ -99,7 +99,7 @@ final List<QuizQuestion> set2Questions = [
     options: ["True", "False"],
     correctAnswer: "False",
     remark: "It has the same meaning as a red light.",
-    imagePath: "/Users/biplovkhatri/Downloads/Quiz App/assets/image_3.png", // Please replace with the correct image path
+    imagePath: "assets/image_3.png",
   ),
 
   QuizQuestion(
@@ -107,7 +107,7 @@ final List<QuizQuestion> set2Questions = [
     options: ["False", "True"],
     correctAnswer: "True",
     remark: "Traffic in the opposite direction is a red light.",
-    imagePath: "../assets/image_4.png", // Please replace with the correct image path
+    imagePath: "assets/image_4.png",
   ),
   QuizQuestion(
     question: "If there is a 'stop line' sign, the stop position is immediately before the sign.",

@@ -1,3 +1,6 @@
+import 'package:demo_application/questions/set3.dart';
+import 'package:demo_application/questions/set4.dart';
+import 'package:demo_application/questions/set5.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_application/const/colors.dart';
 import 'package:demo_application/const/text_style.dart';
@@ -54,7 +57,7 @@ class TestPage extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: headingText(color: blue, size: 18, text: "Test 1"),
+                  child: headingText(color: blue, size: 18, text: "Unit 1: Driver's Knowledge"),
                 ),
               ),
               // Test 2 container
@@ -73,9 +76,90 @@ class TestPage extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: headingText(color: blue, size: 18, text: "Test 2"),
+                  child: headingText(color: blue, size: 18, text: "Unit 2:Obey the signals"),
                 ),
               ),
+              // Test 3 container
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => QuizScreen(questions: set3Questions)),
+                  );
+                },
+                child: Container(
+                  margin: const EdgeInsets.only(bottom: 20),
+                  width: size.width - 40,
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: headingText(color: blue, size: 18, text: "Unit 3: Obey signs, markings, etc."),
+                ),
+              ),
+
+              // Test 4 container
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => QuizScreen(questions: set4Questions)),
+                  );
+                },
+                child: Container(
+                  margin: const EdgeInsets.only(bottom: 20),
+                  width: size.width - 40,
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: headingText(color: blue, size: 18, text: "Unit 4: Where cars pass, where cars shouldn't"),
+                ),
+              ),
+
+              // Test 4 container
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => QuizScreen(questions: set5Questions)),
+                  );
+                },
+                child: Container(
+                  margin: const EdgeInsets.only(bottom: 20),
+                  width: size.width - 40,
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: headingText(color: blue, size: 18, text: "Unit 5: Priority for emergency vehicles, etc."),
+                ),
+              ),
+
+              // Test 4 container
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => QuizScreen(questions: set4Questions)),
+                  );
+                },
+                child: Container(
+                  margin: const EdgeInsets.only(bottom: 20),
+                  width: size.width - 40,
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: headingText(color: blue, size: 18, text: "Unit 4: Where cars pass, where cars shouldn't"),
+                ),
+              ),
+
+
             ],
           ),
         ),
