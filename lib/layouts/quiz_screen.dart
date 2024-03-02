@@ -29,6 +29,9 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
   var userSelectedIndex;
   late String correctAnswer;
 
+  // Add this variable at the beginning of the _QuizScreenState class
+  bool showNextQuestionButton = false;
+
   @override
   void initState() {
     super.initState();
@@ -66,6 +69,7 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
     isLoaded = false;
     resetColors();
     userSelectedIndex = null; // Reset user selection
+    showNextQuestionButton = false; // Reset the button visibility
 
     if (currentQuestionIndex < quizQuestions.length - 1) {
       currentQuestionIndex++;
@@ -178,7 +182,7 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
             ),
           ),
           const SizedBox(height: 20),
-          // Check if image path is provided
+          // Check if the image path is provided
           if (currentQuestion.imagePath != null)
             Image.asset(
               currentQuestion.imagePath!,
@@ -203,16 +207,20 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
                       optionsColor[index] = Colors.green;
                       points = points + 1; // Each correct answer is worth 1 point
                     } else {
-                      optionsColor[index] = Colors.red;
+                      optionsColor[index] = Colors.red; // Red for incorrect answer
+                      showNextQuestionButton = true; // Show the "Next Question" button
                     }
 
-                    if (currentQuestionIndex < quizQuestions.length - 1) {
+                    if (currentQuestionIndex < quizQuestions.length - 1 && !showNextQuestionButton) {
+                      // Allow the user to proceed to the next question after a delay
                       Future.delayed(const Duration(seconds: 1), () {
                         gotoNextQuestion();
                       });
                     } else {
-                      // Handle quiz completion
-                      showResult();
+                      // Handle quiz completion or show warning
+                      if (!showNextQuestionButton) {
+                        showResult();
+                      }
                     }
                   });
                 },
@@ -225,7 +233,7 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
                     color: userSelectedIndex == index
                         ? (correctAnswer == currentQuestion.options[index]
                         ? Colors.green // Correct answer selected
-                        : Colors.red) // Incorrect answer selected
+                        : Colors.redAccent) // Red for incorrect answer
                         : optionsColor[index],
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -243,12 +251,53 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
               margin: const EdgeInsets.only(top: 20),
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: Colors.red,
+                // Use a different color for the warning section
+                color: Colors.grey[300]!.withOpacity(0.9),
                 borderRadius: BorderRadius.circular(12),
               ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Incorrect Answer",
+                    style: const TextStyle(color: Colors.black87, fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    "Your Answer: ${currentQuestion.options[userSelectedIndex!]}",
+                    style: const TextStyle(color: Colors.black87, fontSize: 16),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    "Correct Answer: $correctAnswer",
+                    style: const TextStyle(color: Colors.black87, fontSize: 16),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    "Remark: ${currentQuestion.remark}",
+                    style: const TextStyle(color: Colors.black87, fontSize: 16),
+                  ),
+                ],
+              ),
+            ),
+          // Add this button in the UI for the user to click and proceed to the next question
+          if (showNextQuestionButton)
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  showNextQuestionButton = false; // Hide the button after clicking
+                  gotoNextQuestion();
+                });
+              },
               child: Text(
-                "Correct Answer: $correctAnswer\nRemark: ${currentQuestion.remark}", // Displaying the remark
-                style: const TextStyle(color: Colors.white, fontSize: 18),
+                'Next Question',
+                style: TextStyle(color: Colors.white),
+              ),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.green,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
               ),
             ),
         ],
