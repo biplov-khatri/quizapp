@@ -31,13 +31,11 @@ class TestPage extends StatelessWidget {
               colors: [blue, darkBlue],
             ),
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+          child: ListView(
             children: [
-              // Replace the image with a test icon
               const Icon(
                 Icons.assignment,
-                size: 100, // Adjust the size as needed
+                size: 100,
                 color: Colors.white,
               ),
               const SizedBox(height: 20),
@@ -76,7 +74,7 @@ class TestPage extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: headingText(color: blue, size: 18, text: "Unit 2:Obey the signals"),
+                  child: headingText(color: blue, size: 18, text: "Unit 2: Obey the signals"),
                 ),
               ),
               // Test 3 container
@@ -98,7 +96,6 @@ class TestPage extends StatelessWidget {
                   child: headingText(color: blue, size: 18, text: "Unit 3: Obey signs, markings, etc."),
                 ),
               ),
-
               // Test 4 container
               GestureDetector(
                 onTap: () {
@@ -118,8 +115,7 @@ class TestPage extends StatelessWidget {
                   child: headingText(color: blue, size: 18, text: "Unit 4: Where cars pass, where cars shouldn't"),
                 ),
               ),
-
-              // Test 4 container
+              // Test 5 container
               GestureDetector(
                 onTap: () {
                   Navigator.push(
@@ -138,8 +134,7 @@ class TestPage extends StatelessWidget {
                   child: headingText(color: blue, size: 18, text: "Unit 5: Priority for emergency vehicles, etc."),
                 ),
               ),
-
-              // Test 4 container
+              // Test 6 container
               GestureDetector(
                 onTap: () {
                   Navigator.push(
@@ -155,10 +150,29 @@ class TestPage extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: headingText(color: blue, size: 18, text: "Unit 4: Where cars pass, where cars shouldn't"),
+                  child: headingText(color: blue, size: 18, text: "Unit 6: Traffic at intersections, railroad crossings"),
                 ),
               ),
 
+              // Test 6 container
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => QuizScreen(questions: set4Questions)),
+                  );
+                },
+                child: Container(
+                  margin: const EdgeInsets.only(bottom: 20),
+                  width: size.width - 40,
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: headingText(color: blue, size: 18, text: "Unit 6: Traffic at intersections, railroad crossings"),
+                ),
+              ),
 
             ],
           ),
