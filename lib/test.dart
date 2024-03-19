@@ -177,7 +177,7 @@ class TestPage extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: headingText(color: blue, size: 18, text: "Unit 7: Your Vehicle's Equipment"),
+                  child: headingText(color: blue, size: 18, text: "Unit 7: Safe speed and following distance"),
                 ),
               ),
               // Test 8 container
@@ -196,7 +196,7 @@ class TestPage extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: headingText(color: blue, size: 18, text: "Unit 8: The Effects of Alcohol and Drugs"),
+                  child: headingText(color: blue, size: 18, text: "Unit 8: Pedestrian protection, etc."),
                 ),
               ),
               // Test 9 container
@@ -215,7 +215,7 @@ class TestPage extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: headingText(color: blue, size: 18, text: "Unit 9: Factors Affecting Your Driving Ability"),
+                  child: headingText(color: blue, size: 18, text: "Unit 9: Safety checks, signals, and use of alarms"),
                 ),
               ),
               // Test 10 container
@@ -234,7 +234,7 @@ class TestPage extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: headingText(color: blue, size: 18, text: "Unit 10: Safe Driving Tips"),
+                  child: headingText(color: blue, size: 18, text: "Unit 10: Change of course, etc."),
                 ),
               ),
               // Test 11 container
@@ -253,7 +253,7 @@ class TestPage extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: headingText(color: blue, size: 18, text: "Unit 11: Defensive Driving Strategies"),
+                  child: headingText(color: blue, size: 18, text: "Unit 11: Overtaking/Misdirection"),
                 ),
               ),
               // Test 12 container
@@ -272,7 +272,7 @@ class TestPage extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: headingText(color: blue, size: 18, text: "Unit 12: Sharing the Road with Other Vehicles"),
+                  child: headingText(color: blue, size: 18, text: "Unit 12: Driver's license system, traffic violation notification system"),
                 ),
               ),
               // Test 13 container
@@ -291,7 +291,7 @@ class TestPage extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: headingText(color: blue, size: 18, text: "Unit 13: Night Driving and Special Driving Situations"),
+                  child: headingText(color: blue, size: 18, text: "Unit 13: Driving an automatic car, etc."),
                 ),
               ),
             ],
