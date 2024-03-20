@@ -2,153 +2,124 @@ import '../quiz_question.dart';
 
 final List<QuizQuestion> set7Questions = [
   QuizQuestion(
-      question: "Pedestrian protection, etc. When passing by pedestrians, you must keep a safe distance and pass slowly.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "If you can maintain a safe distance, you don't need to slow down."
+      question: "On the road, you must drive in compliance with the speed limit and the legal speed limit.",
+      options: ["true", "false"],
+      correctAnswer: "true",
+      remark: "You have to drive at a fixed speed on the road.",
+      imagePath: "assets/7_1.png"
   ),
   QuizQuestion(
-      question: "If a pedestrian is splashed with water from a puddle, it is not the driver's fault.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "If a pedestrian is splashed with water or mud, the driver is responsible and must avoid splashing."
+      question: "On roads with this sign, a general motorized bicycle can reach speeds of up to 50 km/h.",
+      options: ["true", "false"],
+      correctAnswer: "false",
+      remark: "The maximum speed of a general motorized bicycle is 30 km/h, so do not drive more than 30 km/h even if a maximum speed of more than 30 km/h is specified."
   ),
   QuizQuestion(
-      question: "While driving on the road, a pedestrian was walking to avoid the puddle, so I drove without slowing down without worrying about the puddle.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "There is a risk of splashing water on pedestrians, so drive slowly and avoid splashing water."
+      question: "The maximum speed of a miniature car on roads where the maximum speed is not specified by signs or markings is 60 km/h.",
+      options: ["true", "false"],
+      correctAnswer: "true",
+      remark: "The legal speed limit for miniature cars is 60 km/h."
   ),
   QuizQuestion(
-      question: "When passing by a safe zone, you must pass slowly regardless of whether there are pedestrians or not.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "When passing by a safety zone, slow down if there are pedestrians. If there are no pedestrians, there is no need to slow down."
+      question: "The legal speed limit for towing vehicles is 60km/h.",
+      options: ["true", "false"],
+      correctAnswer: "true",
+      remark: "The legal speed limit for towing vehicles is 60 km/h."
   ),
   QuizQuestion(
-      question: "When a tram is stopped at a stop, if there is a safe zone, people can pass slowly even if they are getting on and off.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "If there is a safety zone at the tram stop, you can pass slowly even if people are getting on and off."
+      question: "Normally, the legal speed limit for motorcycles is 30km/h.",
+      options: ["true", "false"],
+      correctAnswer: "false",
+      remark: "The legal speed limit for motorcycles is 60 km/h."
   ),
   QuizQuestion(
-      question: "The tram stopped at a stop where there was no safety zone to allow passengers to get on and off, but it was possible to keep a distance of more than 1.5 meters between it and the tram, so it passed slowly.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "If passengers are not getting on and off the tram and there is a distance of 1.5 meters or more, you can pass slowly. But if passengers are getting on and off, you must wait at the back."
+      question: "The stopping distance is the sum of the idle running distance and the braking distance.",
+      options: ["true", "false"],
+      correctAnswer: "true",
+      remark: "The stopping distance is the combined distance of the idle distance and the braking distance."
   ),
   QuizQuestion(
-      question: "If there is clearly no one crossing at the pedestrian crossing, you can continue on.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "If there is clearly no one to cross, you can pass as it is."
+      question: "The stopping distance is the distance that a car travels between the time the brakes start to work and the time it stops.",
+      options: ["true", "false"],
+      correctAnswer: "false",
+      remark: "The distance from the time the brakes start to work to the time it stops is the braking distance."
   ),
   QuizQuestion(
-      question: "When it is not clear whether there are people crossing at the pedestrian crossing or not, you must slow down so that you can stop at any time.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "You don't know if there are people crossing, so please check for pedestrians while proceeding at a speed that allows you to stop at any time."
+      question: "When driving at 60 km/h, the stopping distance is about 20 meters.",
+      options: ["true", "false"],
+      correctAnswer: "false",
+      remark: "At 60 km/h, it takes about 44 meters to stop."
   ),
   QuizQuestion(
-      question: "There was a person trying to cross at the pedestrian crossing, but when the car approached, it stopped, so I passed first.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "Pedestrians have priority at pedestrian crossings. Whenever there is someone crossing, you must pause and give way to pedestrians."
+      question: "If the speed is twice as high, the idle distance is twice as long.",
+      options: ["true", "false"],
+      correctAnswer: "true",
+      remark: "The idle distance increases in proportion to the speed."
   ),
   QuizQuestion(
-      question: "The truck stopped in front of the pedestrian crossing, but I didn't see any pedestrians, so I passed at the same speed.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "If there is a car stopped in front of the pedestrian crossing (bicycle crossing zone), you must stop and check if there are any pedestrians crossing before proceeding."
+      question: "The braking distance quadruples when the speed is doubled.",
+      options: ["true", "false"],
+      correctAnswer: "true",
+      remark: "The braking distance increases in proportion to the square of the speed, so when the speed is doubled, the braking distance is quadrupled."
   ),
   QuizQuestion(
-      question: "In the case shown in the figure, the motorcycle of A must pass slowly when passing the side of car B.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "You must stop before exiting in front of car B to see if there are any pedestrians crossing the street."
+      question: "When the road surface is wet and the tires are worn, the stopping distance can be about twice as long as when the tires are in good condition on a dry surface.",
+      options: ["true", "false"],
+      correctAnswer: "true",
+      remark: "If the road surface is wet or the tires are worn, the stopping distance may be twice as long as usual."
   ),
   QuizQuestion(
-      question: "Overtaking and overtaking are prohibited at pedestrian crossings and within 30 meters of them.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "Neither overtaking nor overtaking is allowed near pedestrian crossings."
+      question: "Even if the road surface is wet due to rain, it does not affect the braking distance, so you can run at the same speed as on a sunny day.",
+      options: ["true", "false"],
+      correctAnswer: "false",
+      remark: "If the road surface is wet due to rain, the braking distance will be longer, so it is better to drive at a slower speed than on a sunny day."
   ),
   QuizQuestion(
-      question: "When passing by a bicycle, you don't need to slow down as long as you can keep a safe distance.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "If you have a safe distance, you don't need to slow down."
+      question: "When driving at 60 km/h, you can keep a safe distance from the car in front of you if you are driving at a distance of about 30 meters.",
+      options: ["true", "false"],
+      correctAnswer: "false",
+      remark: "The number of speed numbers minus 15 is a guide to the safe following distance, so at 60 km/h, it will be about 45 meters (60-15 = 45)."
   ),
   QuizQuestion(
-      question: "If a child is walking alone and you pass by him, you must always pass slowly.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "Your speed should be adjusted according to the situation of the child."
+      question: "When stopping, it is better to stop at a short distance as much as possible, so use the brakes as suddenly as possible to stop.",
+      options: ["true", "false"],
+      correctAnswer: "false",
+      remark: "Sudden braking may cause a rear-end collision and should not be used unless it is unavoidable to avoid danger."
   ),
   QuizQuestion(
-      question: "If a child, a disabled person, or a person with a white or yellow cane is walking, do not slow down or stop and do not obstruct the passage.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "When children or people with reduced mobility are passing, you must stop or slow down to allow them to pass safely."
+      question: "When braking on a two-wheeled vehicle, apply the brakes on the front and rear wheels at the same time.",
+      options: ["true", "false"],
+      correctAnswer: "true",
+      remark: "When braking on a motorcycle, use the front and rear brakes at the same time to stop in a balanced manner."
   ),
   QuizQuestion(
-      question: "When the school bus is stopped for children or kindergarten children to get on and off, the emergency flashing indicator light must be turned on.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "It is obligatory to turn on the emergency flashing indicator light when stopping for children or kindergarten children to get on and off."
+      question: "Slow travel is the speed at which the car can stop within approximately 10 meters of stepping on the brakes.",
+      options: ["true", "false"],
+      correctAnswer: "false",
+      remark: "The speed at which the car can stop within approximately 1 meter after stepping on the brake is slow."
   ),
   QuizQuestion(
-      question: "When the school bus is stopped for children or children to get on and off, other vehicles must stop and wait at the back until the school bus starts.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "Other vehicles don't have to stop but must pass slowly to ensure safety."
+      question: "When driving at an intersection with poor visibility to the left and right, you must pass slowly even if you are driving on a priority road.",
+      options: ["true", "false"],
+      correctAnswer: "false",
+      remark: "As a general rule, you can drive slowly at intersections with poor visibility, but if you are driving on a priority road, you are not obliged to slow down."
   ),
   QuizQuestion(
-      question: "Where there is this sign, children may jump out suddenly, so be careful with your children.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "This sign indicates caution for children, so be vigilant for sudden movements."
+      question: "When passing through a bend in the road, you must go slowly, regardless of the prospect of the turn.",
+      options: ["true", "false"],
+      correctAnswer: "true",
+      remark: "Turns are slow regardless of the line of sight."
   ),
   QuizQuestion(
-      question: "When a novice driver is obliged to display the 'beginner mark', this is to protect the driver by informing the surrounding drivers that he is a novice driver.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "The beginner mark is displayed to inform other drivers that the driver is inexperienced."
+      question: "You have to go slowly on these steep climbs and descents.",
+      options: ["true", "false"],
+      correctAnswer: "false",
+      remark: "The steep downhill is slow, but the uphill is not."
   ),
   QuizQuestion(
-      question: "The beginner mark must be placed in a predetermined position in the front or back of the vehicle.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "It must be attached both to the front and the back of the vehicle."
-  ),
-  QuizQuestion(
-      question: "When an elderly person over the age of 70 drives a car, he or she must wear a senior citizen mark.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "It is not mandatory to wear the senior citizen mark."
-  ),
-  QuizQuestion(
-      question: "A person who has not received a large special license for less than one year must drive a large special vehicle with a beginner mark.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "Only ordinary cars and semi-medium-sized vehicles are obliged to display the beginner mark. Large special-purpose vehicles and motorcycles do not need to display it."
-  ),
-  QuizQuestion(
-      question: "When a novice driver (a person who has not received a regular driver's license for less than one year) drives a regular passenger car, he or she must put the 'beginner mark' in the specified position, but does not have to wear it when driving a regular cargo vehicle.",
-      options: ["True", "False"],
-      correctAnswer: "False",
-      remark: "Even in regular lorries, novice drivers must display the 'beginner mark'."
-  ),
-  QuizQuestion(
-      question: "There was a car with a senior citizen mark in front of me, and it was obviously slower than the other cars, so I took enough distance to overtake.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "Even if a car displays a beginner mark or a senior citizen mark, you can overtake it as long as it is safe to do so."
-  ),
-  QuizQuestion(
-      question: "Do not drive in a way that causes noise that may disturb others.",
-      options: ["True", "False"],
-      correctAnswer: "True",
-      remark: "Avoid generating noise that may disturb the surroundings."
+      question: "Near the top of the uphill climb, you don't necessarily have to go slowly.",
+      options: ["true", "false"],
+      correctAnswer: "false",
+      remark: "Near the top of the uphill slope, the visibility ahead is poor, so be sure to pass slowly."
   ),
 ];

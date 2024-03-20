@@ -53,7 +53,8 @@ final List<QuizQuestion> set11Questions = [
       question: "In this case, car A can overtake car B.",
       options: ["True", "False"],
       correctAnswer: "True",
-      remark: "You can overtake even at an intersection if it is a priority road."
+      remark: "You can overtake even at an intersection if it is a priority road.",
+      imagePath: "assets/11_1.png"
   ),
   QuizQuestion(
       question: "Places within 30 meters of the bus stop and in front of it are prohibited from overtaking.",
@@ -77,25 +78,30 @@ final List<QuizQuestion> set11Questions = [
       question: "Do not overtake where this sign is present.",
       options: ["True", "False"],
       correctAnswer: "True",
-      remark: "This sign indicates that there is a pedestrian crossing or bicycle crossing in front of you. There is a pedestrian crossing ahead, so do not overtake."
+      remark: "This sign indicates that there is a pedestrian crossing or bicycle crossing in front of you. There is a pedestrian crossing ahead, so do not overtake.",
+      imagePath: "assets/11_2.png"
   ),
   QuizQuestion(
       question: "This sign and the yellow median line marking are both signs and markings with the same meaning.",
       options: ["True", "False"],
       correctAnswer: "False",
-      remark: "The meaning is different because it is a sign that says 'No overtaking' and a sign that says 'No overtaking on the right side'."
+      remark: "The meaning is different because it is a sign that says 'No overtaking' and a sign that says 'No overtaking on the right side'.",
+      imagePath: "assets/11_3.png"
   ),
   QuizQuestion(
       question: "In this case, car A can overtake outside the center line, but car B cannot overtake outside the center line.",
       options: ["True", "False"],
       correctAnswer: "True",
-      remark: "From the white line, you can overtake beyond the center line, but from the yellow line, you can't."
+      remark: "From the white line, you can overtake beyond the center line, but from the yellow line, you can't.",
+      imagePath: "assets/11_4.png"
+
   ),
   QuizQuestion(
       question: "In this case, car A can go beyond the center line and overtake car B.",
       options: ["True", "False"],
       correctAnswer: "False",
-      remark: "If the width of the left part of the road is more than 6 m, you should not overtake by crossing the center line."
+      remark: "If the width of the left part of the road is more than 6 m, you should not overtake by crossing the center line.",
+      imagePath: "assets/11_5.png"
   ),
   QuizQuestion(
       question: "When overtaking a car in front, as a general rule, overtake from the right side.",

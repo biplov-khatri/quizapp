@@ -59,7 +59,8 @@ QuizQuestion(
 question: "This is a signal to turn right or change course to the right.",
 options: ["True", "False"],
 correctAnswer: "False",
-remark: "It is a signal when turning left or changing course to the left."
+remark: "It is a signal when turning left or changing course to the left.",
+  imagePath: "assets/9_1.png",
 ),
 QuizQuestion(
 question: "When turning right, the hand signal is to extend your right arm horizontally with your right arm out of the right side of the car, or with your left arm out on the left side of the car and your elbow vertically upward.",
@@ -71,7 +72,8 @@ QuizQuestion(
 question: "In this way, when the hand is moved back and forth with the hand diagonally down, it is a signal to slow down or stop.",
 options: ["True", "False"],
 correctAnswer: "False",
-remark: "It is a signal to retreat."
+remark: "It is a signal to retreat.",
+  imagePath: "assets/9_2.png",
 ),
 QuizQuestion(
 question: "When it is difficult to see the turn signal due to the reflection of the setting sun, etc., use the hand signal in conjunction with the turn signal.",
@@ -126,13 +128,15 @@ remark: "Regardless of the amount of traffic, when you get out of the car, make 
       question: "When passing through an area with this sign, the alarm must be sounded.",
       options: ["True", "False"],
 correctAnswer: "True",
-remark: "If there is a sign that says 'Honk the horn', you must sound the alarm."
+remark: "If there is a sign that says 'Honk the horn', you must sound the alarm.",
+    imagePath: "assets/9_3.png",
 ),
 QuizQuestion(
 question: "Within the section where this sign is located, the alarm must be sounded whenever passing through intersections, turns, and uphill tops.",
 options: ["True", "False"],
 correctAnswer: "True",
-remark: "It is not always the case that the alarm is sounded because it is difficult to see."
+remark: "It is not always the case that the alarm is sounded because it is difficult to see.",
+  imagePath: "assets/9_4.png",
 ),
 QuizQuestion(
 question: "In the 'horn section', the alarm must be sounded all the time.",

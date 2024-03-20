@@ -17,19 +17,22 @@ final List<QuizQuestion> set10Questions = [
       question: "In such a traffic zone, it is not possible to change lanes from either A or B traffic zone.",
       options: ["True", "False"],
       correctAnswer: "True",
-      remark: "The yellow line of the vehicular traffic zone is a sign prohibiting changing directions, so do not change course."
+      remark: "The yellow line of the vehicular traffic zone is a sign prohibiting changing directions, so do not change course.",
+    imagePath: "assets/10_1.png",
   ),
   QuizQuestion(
       question: "On such a road, car A may change course as shown in the figure.",
       options: ["True", "False"],
       correctAnswer: "True",
-      remark: "From the direction of the white line, you can change course."
+      remark: "From the direction of the white line, you can change course.",
+    imagePath: "assets/10_2.png",
   ),
   QuizQuestion(
       question: "On such roads, you may change lanes to make a right or left turn.",
       options: ["True", "False"],
       correctAnswer: "False",
-      remark: "In the yellow line traffic zone, you cannot change lanes even if you turn left or right."
+      remark: "In the yellow line traffic zone, you cannot change lanes even if you turn left or right.",
+      imagePath: "assets/10_3.png"
   ),
   QuizQuestion(
       question: "While driving on a road with a yellow line vehicular traffic zone, an emergency car passed from behind, so I changed course and gave way.",
@@ -47,13 +50,15 @@ final List<QuizQuestion> set10Questions = [
       question: "Where this sign is located, you can cross if your garage is on the right side of the road.",
       options: ["True", "False"],
       correctAnswer: "False",
-      remark: "When you see this sign, you can't cross to the right side of the road, even if it's your garage."
+      remark: "When you see this sign, you can't cross to the right side of the road, even if it's your garage.",
+      imagePath: "assets/10_4.png"
   ),
   QuizQuestion(
       question: "Where this sign is located, it is also prohibited to retreat at the same time.",
       options: ["True", "False"],
       correctAnswer: "False",
-      remark: "It is a 'no vehicle crossing' and 'no turning' sign, so it does not prohibit reversing."
+      remark: "It is a 'no vehicle crossing' and 'no turning' sign, so it does not prohibit reversing.",
+      imagePath: "assets/10_5.png"
   ),
   QuizQuestion(
       question: "Entering in front of a car that is slowing down to stop before a railroad crossing is not an interruption.",

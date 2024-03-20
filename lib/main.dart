@@ -9,7 +9,7 @@ import 'package:demo_application/const/text_style.dart';
 import 'package:demo_application/test.dart';
 import 'package:demo_application/study_materials.dart';
 import 'package:demo_application/settings.dart';
-import 'package:demo_application/layouts/theme_provider.dart';
+
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: blue));

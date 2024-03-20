@@ -2,7 +2,7 @@ import '../quiz_question.dart';
 
 final List<QuizQuestion> set8Questions = [
   QuizQuestion(
-      question: "Pedestrian protection, etc. When passing by pedestrians, you must keep a safe distance and pass slowly.",
+      question: " When passing by pedestrians, you must keep a safe distance and pass slowly.",
       options: ["True", "False"],
       correctAnswer: "False",
       remark: "If you can maintain a safe distance, you don't need to slow down."
@@ -65,7 +65,8 @@ final List<QuizQuestion> set8Questions = [
       question: "In the case shown in the figure, the motorcycle of A must pass slowly when passing the side of car B.",
       options: ["True", "False"],
       correctAnswer: "False",
-      remark: "You must stop before exiting in front of car B to see if there are any pedestrians crossing the street."
+      remark: "You must stop before exiting in front of car B to see if there are any pedestrians crossing the street.",
+    imagePath: "assets/8_1.png",
   ),
   QuizQuestion(
       question: "Overtaking and overtaking are prohibited at pedestrian crossings and within 30 meters of them.",
@@ -107,7 +108,8 @@ final List<QuizQuestion> set8Questions = [
       question: "Where there is this sign, children may jump out suddenly, so be careful with your children.",
       options: ["True", "False"],
       correctAnswer: "True",
-      remark: "This sign indicates caution for children, so be vigilant for sudden movements."
+      remark: "This sign indicates caution for children, so be vigilant for sudden movements.",
+    imagePath: "assets/68_2.png",
   ),
   QuizQuestion(
       question: "When a novice driver is obliged to display the 'beginner mark', this is to protect the driver by informing the surrounding drivers that he is a novice driver.",
